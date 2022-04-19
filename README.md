@@ -1,4 +1,4 @@
-# flutter_identityserver
+# flutter_firebase
 
 Projeto mobile com autenticação em Identity Server 4
 * Clonar projeto: `git clone https://github.com/jonathandsantiago/flutter_firebase.git`
