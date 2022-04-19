@@ -102,7 +102,7 @@ class _HomeContentState extends State<HomeContent>
               left: 0,
               right: 0,
               bottom: lerp(maxQuickActionsMargin, minQuickActionsMargin),
-              child: HomeActions(),
+              child: const HomeActions(),
             )
           ],
         );

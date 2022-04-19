@@ -24,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
           Center(
             child: ElevatedButton(
               style: const ButtonStyle(),
-              onPressed: () =>
-                  _authRepository.loginPorEmailAsync('seu-email', 'sua-senha'),
+              onPressed: () => _authRepository.loginPorEmailAsync(
+                  'jonathandcsantiago@outlook.com', 'Ab123456.'),
               child: const Text("Sign In"),
             ),
           )

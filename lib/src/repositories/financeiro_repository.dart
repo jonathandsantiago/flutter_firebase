@@ -34,11 +34,4 @@ class FinanceiroRepository {
       .orderBy('timestamp', descending: true)
       .limit(1)
       .snapshots();
-
-  Future<void> alterarNomeUsuario(String userUID, String nomeUsuario) =>
-      _firestore.collection("usuarios").doc(userUID).set(
-          {'nome': nomeUsuario, 'timestamp': FieldValue.serverTimestamp()});
-
-  Stream<DocumentSnapshot> obterUsuario(String userUID) =>
-      _firestore.collection("usuarios").doc(userUID).snapshots();
 }

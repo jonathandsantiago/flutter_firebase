@@ -86,11 +86,27 @@ class FinanceiroDetalhes extends StatelessWidget {
                         Text(
                           _formatter.format(saldo),
                           style: TextStyle(
-                              color: totalDespesa > saldo
-                                  ? Colors.red
-                                  : Colors.green,
+                              color: saldo < 0 ? Colors.red : Colors.green,
                               fontWeight: FontWeight.w400,
                               fontSize: 30.0),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            const Text(
+                              "Total receita ",
+                              style: TextStyle(
+                                  color: ColorConstant.colorMain,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15.0),
+                            ),
+                            Text(
+                              _formatter.format(totalReceita),
+                              style: const TextStyle(
+                                  color: Colors.orange,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15.0),
+                            ),
+                          ],
                         ),
                         Row(
                           children: <Widget>[
@@ -104,7 +120,7 @@ class FinanceiroDetalhes extends StatelessWidget {
                             Text(
                               _formatter.format(totalDespesa),
                               style: const TextStyle(
-                                  color: Colors.orange,
+                                  color: Colors.red,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15.0),
                             ),
@@ -144,7 +160,7 @@ class FinanceiroDetalhes extends StatelessWidget {
                         width: MediaQuery.of(context).size.height * .25,
                         child: LinearProgressIndicator(
                           backgroundColor:
-                              totalDespesa > saldo ? Colors.red : Colors.green,
+                              saldo < 0 ? Colors.red : Colors.green,
                           valueColor: const AlwaysStoppedAnimation<Color>(
                               Colors.orange),
                           value: _totalDespesa,
