@@ -5,6 +5,8 @@ Projeto mobile com autenticação em Identity Server 4
 * `cd flutter_firebase`
 * `flutter pub get` 
 
+![](https://github.com/jonathandsantiago/flutter_firebase/tree/main/assets/images/app.gif')
+
 # Bibliotecas
 * firebase_auth `flutter pub add firebase_auth`
 * cloud_firestore `flutter pub add cloud_firestore`
